@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Welcome to Daman</title>
+  <link rel="icon" type="image/x-icon" href="fav.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: rgb(229, 223, 223);">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="logo.PNG" alt="logo">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Place to Vist</a></li>
+              <li><a class="dropdown-item" href="#">Place for kids</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Have Fun!!!</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+          <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- signup -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="signupModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide my-1" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="slider1.jpg" class="d-block w-100" alt="" height="400px" width="1400px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color: white; font-size: 40px; font-weight: bold;">Visiting Amazing Places With Us</h5>
+          <button type="button" class="btn btn-success">Visit</button>
+          <button type="button" class="btn btn-danger">Again</button>
+          <button type="button" class="btn btn-warning">Daman</button>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="slider2.jpg" class="d-block w-100" alt="" height="400px" width="1400px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color: white; font-size: 40px; font-weight: bold;">Just Go,Go See All The Beauty In The World</h5>
+          <button type="button" class="btn btn-success">Visit</button>
+          <button type="button" class="btn btn-danger">Again</button>
+          <button type="button" class="btn btn-warning">Daman</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="bg3.jpg" class="d-block w-100" alt="" height="400px" width="1400px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color: #474d52; font-size: 40px; font-weight: bold;">Oh,the Places You'll Go</h5>
+          <button type="button" class="btn btn-success">Visit</button>
+          <button type="button" class="btn btn-danger">Again</button>
+          <button type="button" class="btn btn-warning">Daman</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container my-4">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Water-Park</strong>
+            <h3 class="mb-0" style="font-family: cursive;">Mirasol-Lake-Garden</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">Looking for peace during your trip to Daman? Then Mirasol Lake Garden is the places to go. Blanketed by a green carpet, and numerous trees, this garden is one of the best places to visit in Daman to indulge in an unending affair with nature. The calmness and serenity of the place provide you an opportunity to spend quality time with your loved ones and engage in fun-filled activities for the purpose of entertainment.
+
+              Location: Near Kadaiya Village, Nani Daman
+              Timings: 10 am to 6 pm
+              Entry Fee: INR 10 for adults & INR 5 for children
+              Things To Do: Boating, and enjoying fun filled rides in the amusement area of the park
+              Time Required: 1 hour.
+              How To Reach: Bus to Mirosal water park.
+              What’s Special: Boat rides,  beautiful lake.
+              Entry Fee: INR 30, kids – free
+              </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="Mirasol.webp" alt="" height="200px" width="250px">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Fort</strong>
+            <h3 class="mb-0" style="font-family: cursive;" >Moti-Daman-Fort</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">Constructed by the Portuguese, towards the end of sixteenth century, the Moti Daman Fort is one of the most popular monuments in Daman. Even though the fort has worn out, and needs restoration, it is still one of the best places to visit in Daman which boasts of Colonial style architecture featuring huge walls, 10 bastions, 2 gateways, and an Iberian church.
+
+              Location: Moti Daman, Daman and Diu
+              Timings: 8 am to 4 pm
+              Entry Fee: INR 10 to INR 15 per person
+              </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="Moti daman.webp" alt="" height="200px" width="250px">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Soak In The View</strong>
+            <h3 class="mb-0" style="font-family: cursive;">Light-House</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">
+              Wondering what to see in Daman? Then plan a visit to the colossal Lighthouse in Daman. Located in the vicinity of the Moti Daman Fort, Lighthouse is one of the most popular Daman tourist attractions. A large number of tourists flock to this place to spectate the marvelous sight of sunset, witness the panoramic views of the Arabian Sea, and the city. It is also a perfect place for photography lovers.
+              
+              Location: Rua Martim Afonso, Fort Area, Moti Daman, Daman, Daman
+              Time Required: 1-2 hours
+              How To Reach: Take a cab from Modi Daman
+              What’s Special: Taking pictures during sunrise, long walls
+              Entry Fee: Free
+              </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="Lighthouse.webp" alt="" height="200px" width="250px">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Church</strong>
+            <h3 class="mb-0" style="font-family: cursive;" >Cathedral Of Bom Jesus </h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto"> Due to a strong connection with Portuguese, Daman is populated with Catholics which makes Cathedral of Bom Jesus one of the top Daman tourist places. The construction of this cathedral can be dated back to 1603 and still the building stands strong. The beautiful altarpiece along with the intricately carved doorway has attracted several tourists till now. One must visit this tourist place in Daman to witness the craftsmanship and architecture of this place.
+
+              Location: Manguerial Rd, Fort Area, Moti Daman, Daman, Daman and Diu 396220
+              Timings: 7 am – 9 pm
+              Time Required: 1 hour.
+              How To Reach: 10kms from Panjim tax stand, local cabs available.
+              Entry Fee: Free
+              </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="Cathedra.webp" alt="" height="200px" width="250px">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Beach</strong>
+            <h3 class="mb-0" style="font-family: cursive;" >Jampore Beach  </h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">Bored of the same old beaches of Goa? Then plan a trip to the charming city of Daman which boasts of virgin palm-lined beaches. Jampore Beach is one such pristine beach in the city which is one of the best places to visit in Daman, known for numerous adventure activities, enthralling views of the expansive Arabian Sea, and a serene environment to give you a break from the bustling life of the city.
+
+              Location: Jampore Beach Road, Daman
+              Things To Do At Jampore Beach: Parasailing. car racing, camel/ horse ride, beach sports, and relaxing in the shacks
+              Time Required: 1-2 hours
+              How To Reach: Take a cab from Naini Damin taxi stand
+              What’s Special: Walk
+              Entry Fee: Free
+               </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="Beache.webp" alt="" height="200px" width="250px">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Great Place For Kids</strong>
+            <h3 class="mb-0" style="font-family: cursive;" >Devka Amusement Park </h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">One of the best Daman tourist places is the Devka Amusement Park. A simple, old and basic park located by the Devka beach offers various joyrides, boasts a large garden, a food court with special ice cream parlour. It is one of the most amazing things to do in Daman if you are on a family vacation and especially visiting with kids. Get the amazing opportunity to remember your childhood as you can also enjoy camel and pony rides as well.
+
+              Location: Devka Beach Rd, Opp.Hotel Ashoka Palace, Nani Daman, Daman, Daman and Diu 396210
+              Timing: 9 am – 9 pm
+              Time Required: 1 hour.
+              How To Reach: Alongside Devka Beach road, cab, or local transport available.
+              What’s Special: Small rides, beaches.
+              Entry Fee: INR 5.
+              </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="Amusement-Park.webp" alt="" height="200px" width="250px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="container" style="width: 100vw; height: 7vh; background-color: #0d6efd; text-align: center; color: white;">
+    <hr>
+    <p class="float-end"><a href="#" style="color: white; text-decoration: none;">Back to top</a></p>
+    <p>© 2023–2030 Company, Inc | All Right Reserved</p>
+  </footer>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

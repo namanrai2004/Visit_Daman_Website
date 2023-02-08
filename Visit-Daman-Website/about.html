@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Welcome to Daman</title>
+  <link rel="icon" type="image/x-icon" href="fav.jpg">
+  <style>
+    .logo img{
+    width: 66px;
+    height: 33px;
+    border-radius: 7px;
+  }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="logo.PNG" alt="logo">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Place To Visit</a></li>
+              <li><a class="dropdown-item" href="#">Place For kids</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Have Fun</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+          <button class="btn btn-outline-light"  data-bs-toggle="modal" data-bs-target="#loginModal"  data-bs-toggle="modal" data-bs-target="#signupModal">Login</button>
+          <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- signup -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signupModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Address 2</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-3">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading" style="font-family: cursive;">History Of Daman.. <span class="text-muted">It’ll blow your mind.</span>
+        </h2>
+        <p class="lead">
+
+          Location:=>
+
+U.T. of Daman and Diu comprises two districts namely Daman and Diu. Both Districts are situated on western coast of India at a distance of about 700 kms. Daman is the head Quarter of this U.T.
+
+Daman is on main land near southern portion of Gujarat State. Vapi is the nearest Railway Station (13 kms) which is on Western Railway between Mumbai and Surat. Vapi is 167 kms from Mumbai Central and 95 kms from Surat.
+
+Diu is an island near Una of Junagarh District in Gujarat State. Nearest Railway Station is Delwada at the distance of 9 kms from Diu. But important trains are linked with Veraval which is 90 kms from Diu. A portion of Diu District is on main land which is named as Ghoghla. A small part of Diu known as Simbor is situated in Gujarat at a distance of 25 kms from Diu.
+
+History
+
+After Liberation on 19th December, 1961 from Portuguese Rule of more than four centuries, Daman and Diu became a part of the U.T. of Goa, Daman and Diu under Government of India. After delinking of Goa, which attained statehood, U.T. of Daman and Diu came into existence on 30th May, 1987.
+
+Brief history of Daman and Diu Districts are furnished below as per District Census Hand Book of Census of India, 1981.
+
+Daman District
+
+The District of Daman is known to have formed part of the country known as Lata which was one the seven divisions of the Aparant or Konkan Vishaya, between 2nd Century B.C. to 13th Century A.D. The Daman District is included in the intervening region and therefore must have formed part of the Mauryan empire at least at the time of Ashoka. After the Mauryan power was weakened, the district was under the rule of Satkarni I, the Satavahana ruler in the end of 2nd Century B.C. After that during the 1st Century A.D. the District of Daman seemed to have been ruled by Kshaharatas who were the provincial governors i.e Kshatrapas under the Kushana emperors. During A.D. 125, Satkarni drove away the Kshaharatas and ruled the districts. But the Satavahana rule was shortlived. The Kshaharatas of Ujjain re-conquered the district by about A.D 150 from the Satavahana ruler Satakarni and Daman District again passed under the rule of Kshaharatas of Ujjain till A.D. 249. After the Kshatrapas, the district was ruled by the Abhir Kings till A.D. 416.
+
+After the rule of Abhir kings, the district was under the rule of Traikutakas during the 5th Century A.D. who were the feudatories of the Abhiras. By A.D. 500, the Traikutaka power seems to have been destroyed by the Vakataka king Harishena. The District then was under the power of the Kalachuris of Mahishmati King Krishnaraja and his successors till A.D. 609. King Mangales of Chalukyas of Badami routed out the last king Budharaja of Kalachuris by about A.D. 609. The Chalukyas of Badami ruled the district till A.D. 671 and their descendants known as Lata or Navasari Chalukyas ruled from Navasarika, modern Navasari, on the bank of the river Purna to the north of Daman. They ruled independently as feudatories of the Badami Chalukyas of the Deccan. In the next eight centuries, Daman came under the control of a large number of Hindu kings and chieftains.
+
+Mahmud Shah Begada, Sultan of Gujarat, seems to have conquered fort Parnera on the river Par and port of Daman and levied tribute from Jagatshah in 1465. Naranshah who succeeded Jagatshah ruled from A.D. 1470 to 1500 and Dharmshah II from 1500 to 1531.
+
+Daman was acquired by the Portuguese from the Shah of Gujarat. They noticed the port of Daman for the first time in 1523. They attacked it several times and finally obtained it in 1559 by means of a treaty with the Shah. Thereafter, it was under the rule of Portuguese till its liberation in 1961.
+
+Diu District
+
+The documented history of the District of Diu begins with the Maurya rule (c.322-220 B.C). Emperor Chandragupta Maurya had extended his supremacy over Saurashtra and had appointed Pushagupta as Governor of the province of Saurashtra with the Head-quarters in village Girnar near Junagadh. Yavanaraj Tushappa ruled over Saurashtra as Governor of Emperor Ashoka (c.273-237 B.C.). Emperor Ashoka had sent Yavana Thero named Dhammarakhito as evangelist to the western sea board including Diu. His grandson Samprati (c.229-220 B.C.) seems to have ruled over Saurashtra from Ujjain. He propagated Jainism and erected many Jain Temples. The Jain traditions from Diu seems to belong to this period.
+
+The District seems to be under the rule of Indo-Greek kings Eukratides (c.171- 150 B.C. ), Meanandar (c.115 to 90 B.C.) and Appollodotes II of the 1st Century B.C. No historical information is available for the period of 150 years from the 1st Century B.C. to about A.D. 50. During the A.D. 1st Century , the district seems to have been ruled by Kshaharatas who had established their rule over western part of India including Saurashtra. For more than the next thousand years, Diu formed part of the kingdoms of dynasties that ruled over the western India including Gujarat.
+
+The last king of the Vaja dynasty ruler of Somnath Patan ruled over Diu in the first decade of the fifteenth century. Thereafter, Diu came under the control of the Muslims Sultans of Gujarat who seem to have ruled Diu for the next one and a half centuries. Early in 1535, the Portuguese Governor De Cunha had led his expedition for the capture of the town in Diu, but was defeated by the Sultan. However, around that period, the Gujarat Sultan Bahadur Shahâ€Ÿs kingdom was overwhelmed by Mughal invasion. Pressed by Mughal king Humayun on one side and the Portuguese at the gates of Diu, Bahadur Shah entered into a treaty with Nuno da Cunha on October 25, 1535 who agreed to assist Bahadur Shah against his enemy by land and sea. In turn he received permission to construct a fortress at Diu and a site was granted for this purpose in the harbour. After the Mughal danger was receded, the Shah of Gujarat realized his mistake in allowing the Portuguese to construct the fort. Finally Diu was conquered by the Portuguese in 1546 who ruled there till 1961.
+
+Source: Series 29: Goa, Daman and Diu, District Census Hand Book, Census of India, 1981.
+
+Geography
+
+Both the Districts of Daman and Diu are near Gujarat State separated by about 700 kms from one another.
+
+Daman
+
+Daman District is situated nearly 200 kms north from Mumbai and is surrounded by Valsad District of Gujarat State in North, East and South. Daman Ganga River coming from Nasik passes through middle of Daman District dividing it into two parts namely Moti Daman and Nani Daman.
+
+The District of Daman is situated on the western â€“coast of India between the of latitude north and between the meridians"- 00' and 20Ëš- 22"- 58'parallels 20Ëš- 27 of longitude east of Greenwich. Its length from the"- 43' and 72Ëš- 54"- 42'72Ëš-49 extreme north to south measures 11 kms and width from east to west, measures 8 kms. The altitude is 12 metres above the sea level.
+
+Diu
+
+Diu District is an island on southern portion of Gujarat Peninsula. It is joined with Una District of Gujarat State by two bridges over a sea creek.
+
+The District of Diu is situated between the parallels 20Ëš-44 of"-26' and 70Ëš-52"-24' of latitude north and between the meridians 71Ëš-00"-00 longitude east of Greenwich. Its length from the extremes north and south, measures 4.6 kms and width from east to west measures 13.8 kms. The altitude is 6 metres above sea level. The topography is generally plain. The hillocks attain maximum height of 30 metres
+
+
+Information Source: Daman and Diu
+Date Published: 2016-02-03</p>
+      </div>
+      <div class="col-md-5">
+        <img src="about daman.jpg" alt="" width="500px">
+       
+       
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <footer class="container" style="width: 100vw; height: 7vh; background-color: #0d6efd; text-align: center; color: white;">
+    <hr>
+    <p class="float-end"><a href="#" style="color: white; text-decoration: none;">Back to top</a></p>
+    <p>© 2023–2030 Company, Inc | All Right Reserved</p>
+  </footer>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
