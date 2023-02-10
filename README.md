@@ -1,2 +1,2 @@
 Tourist_Website,
-Yoy can see and Visit the Place
+You can see and Visit the Place
